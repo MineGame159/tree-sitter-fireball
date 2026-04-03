@@ -140,6 +140,16 @@
             "named": true
           }
         ]
+      },
+      "size": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "integer",
+            "named": true
+          }
+        ]
       }
     }
   },
@@ -466,6 +476,11 @@
         ]
       }
     }
+  },
+  {
+    "type": "integer",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "member_expr",

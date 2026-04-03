@@ -26,8 +26,6 @@ const hex_integer = /0[xX][0-9a-fA-F]+/
 const unsigned_integer = /[0-9]+[uU]/
 const signed_integer = /[0-9]+/
 
-const integer = choice(binary_integer, hex_integer, unsigned_integer, signed_integer)
-
 const double = /[0-9]+\.[0-9]+/
 const float = /[0-9]+\.[0-9]+[fF]/
 
@@ -282,7 +280,7 @@ module.exports = grammar({
 
     array_type: $ => seq(
       "[",
-      field("size", integer),
+      field("size", $.integer),
       "]",
       field("element", $.type),
     ),
@@ -301,6 +299,8 @@ module.exports = grammar({
       ":",
       field("type", $.type),
     ),
+
+    integer: $ => choice(binary_integer, hex_integer, unsigned_integer, signed_integer),
 
     identifier: $ => /[a-zA-Z_][a-zA-Z_0-9]*/,
 

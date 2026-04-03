@@ -1507,25 +1507,8 @@
           "type": "FIELD",
           "name": "size",
           "content": {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "PATTERN",
-                "value": "0[bB][01]+"
-              },
-              {
-                "type": "PATTERN",
-                "value": "0[xX][0-9a-fA-F]+"
-              },
-              {
-                "type": "PATTERN",
-                "value": "[0-9]+[uU]"
-              },
-              {
-                "type": "PATTERN",
-                "value": "[0-9]+"
-              }
-            ]
+            "type": "SYMBOL",
+            "name": "integer"
           }
         },
         {
@@ -1585,6 +1568,27 @@
             "type": "SYMBOL",
             "name": "type"
           }
+        }
+      ]
+    },
+    "integer": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "PATTERN",
+          "value": "0[bB][01]+"
+        },
+        {
+          "type": "PATTERN",
+          "value": "0[xX][0-9a-fA-F]+"
+        },
+        {
+          "type": "PATTERN",
+          "value": "[0-9]+[uU]"
+        },
+        {
+          "type": "PATTERN",
+          "value": "[0-9]+"
         }
       ]
     },
