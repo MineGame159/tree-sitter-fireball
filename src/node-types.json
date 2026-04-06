@@ -503,10 +503,6 @@
         "required": false,
         "types": [
           {
-            "type": "*",
-            "named": false
-          },
-          {
             "type": "identifier",
             "named": true
           }

@@ -261,17 +261,8 @@
                                 "type": "FIELD",
                                 "name": "symbol",
                                 "content": {
-                                  "type": "CHOICE",
-                                  "members": [
-                                    {
-                                      "type": "STRING",
-                                      "value": "*"
-                                    },
-                                    {
-                                      "type": "SYMBOL",
-                                      "name": "identifier"
-                                    }
-                                  ]
+                                  "type": "SYMBOL",
+                                  "name": "identifier"
                                 }
                               },
                               {
@@ -287,17 +278,8 @@
                                       "type": "FIELD",
                                       "name": "symbol",
                                       "content": {
-                                        "type": "CHOICE",
-                                        "members": [
-                                          {
-                                            "type": "STRING",
-                                            "value": "*"
-                                          },
-                                          {
-                                            "type": "SYMBOL",
-                                            "name": "identifier"
-                                          }
-                                        ]
+                                        "type": "SYMBOL",
+                                        "name": "identifier"
                                       }
                                     }
                                   ]

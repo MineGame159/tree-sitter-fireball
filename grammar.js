@@ -92,10 +92,7 @@ module.exports = grammar({
           field("path", $.identifier),
           seq(
             "{",
-            comma_list("symbol", choice(
-              "*",
-              $.identifier,
-            )),
+            comma_list("symbol", $.identifier),
             "}",
           ),
         ),
