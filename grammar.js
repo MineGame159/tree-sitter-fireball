@@ -219,6 +219,10 @@ module.exports = grammar({
       $.char,
       $.string,
 
+      $.sizeof,
+      $.alignof,
+      $.offsetof,
+
       $.prefix_expr,
       $.binary_expr,
 
@@ -236,12 +240,32 @@ module.exports = grammar({
     ),
 
     bool: $ => choice("true", "false"),
-
     number: $ => choice(binary_integer, hex_integer, unsigned_integer, signed_integer, float, double),
-
     char: $ => char,
-
     string: $ => string,
+
+    sizeof: $ => seq(
+      "sizeof",
+      "(",
+      field("type", $.type),
+      ")",
+    ),
+
+    alignof: $ => seq(
+      "alignof",
+      "(",
+      field("type", $.type),
+      ")",
+    ),
+
+    offsetof: $ => seq(
+      "offsetof",
+      "(",
+      field("type", $.type),
+      ",",
+      field("field", $.identifier),
+      ")",
+    ),
 
     prefix_expr: $ => prec(12, seq(
       choice("-", "!", "&", "*"),
