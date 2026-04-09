@@ -244,7 +244,7 @@ module.exports = grammar({
     string: $ => string,
 
     prefix_expr: $ => prec(12, seq(
-      choice("-", "!"),
+      choice("-", "!", "&", "*"),
       field("expr", $.expr),
     )),
 
