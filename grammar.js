@@ -58,6 +58,7 @@ module.exports = grammar({
       $.mod,
       $.import,
       $.struct,
+      $.impl,
       $.func,
     ),
 
@@ -113,12 +114,29 @@ module.exports = grammar({
       "}",
     ),
 
+    impl: $ => seq(
+      "impl",
+      field("type", $.type),
+      "{",
+      comma_list("func", $.func),
+      "}",
+    ),
+
     func: $ => seq(
       field("attr_group", repeat($.attribute_group)),
       "func",
       field("name", $.identifier),
       "(",
-      comma_list("param", choice($.name_type, "...")),
+      choice(
+        comma_list("param", choice($.name_type, "...")),
+        seq(
+          field("receiver", $.identifier),
+          optional(seq(
+            ",",
+            comma_list("param", choice($.name_type, "...")),
+          )),
+        ),
+      ),
       ")",
       field("returns", optional($.type)),
       field("body", optional($.block)),

@@ -8,6 +8,10 @@
         "named": true
       },
       {
+        "type": "impl",
+        "named": true
+      },
+      {
         "type": "import",
         "named": true
       },
@@ -454,6 +458,16 @@
           }
         ]
       },
+      "receiver": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
       "returns": {
         "multiple": false,
         "required": false,
@@ -526,6 +540,32 @@
         "types": [
           {
             "type": "stmt",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "impl",
+    "named": true,
+    "fields": {
+      "func": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "func",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "type",
             "named": true
           }
         ]
@@ -1080,6 +1120,10 @@
   },
   {
     "type": "if",
+    "named": false
+  },
+  {
+    "type": "impl",
     "named": false
   },
   {
