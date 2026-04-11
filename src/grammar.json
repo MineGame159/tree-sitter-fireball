@@ -1168,6 +1168,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "null"
+        },
+        {
+          "type": "SYMBOL",
           "name": "sizeof"
         },
         {
@@ -1278,6 +1282,10 @@
     "string": {
       "type": "PATTERN",
       "value": "\"([^\"\\\\]|\\\\.)*\""
+    },
+    "null": {
+      "type": "STRING",
+      "value": "null"
     },
     "sizeof": {
       "type": "SEQ",

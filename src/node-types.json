@@ -66,6 +66,10 @@
         "named": true
       },
       {
+        "type": "null",
+        "named": true
+      },
+      {
         "type": "number",
         "named": true
       },
@@ -1133,6 +1137,10 @@
   {
     "type": "mod",
     "named": false
+  },
+  {
+    "type": "null",
+    "named": true
   },
   {
     "type": "offsetof",
