@@ -66,7 +66,7 @@
         "named": true
       },
       {
-        "type": "null",
+        "type": "null_expr",
         "named": true
       },
       {
@@ -1139,7 +1139,7 @@
     "named": false
   },
   {
-    "type": "null",
+    "type": "null_expr",
     "named": true
   },
   {

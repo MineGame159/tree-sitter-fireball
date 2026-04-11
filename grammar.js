@@ -236,7 +236,7 @@ module.exports = grammar({
       $.number,
       $.char,
       $.string,
-      $.null,
+      $.null_expr,
 
       $.sizeof,
       $.alignof,
@@ -262,7 +262,7 @@ module.exports = grammar({
     number: $ => choice(binary_integer, hex_integer, unsigned_integer, signed_integer, float, double),
     char: $ => char,
     string: $ => string,
-    null: $ => "null",
+    null_expr: $ => "null",
 
     sizeof: $ => seq(
       "sizeof",
