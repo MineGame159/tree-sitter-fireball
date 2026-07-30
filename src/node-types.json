@@ -188,6 +188,10 @@
       {
         "type": "primitive_type",
         "named": true
+      },
+      {
+        "type": "slice_type",
+        "named": true
       }
     ]
   },
@@ -1453,6 +1457,32 @@
     "type": "sizeof",
     "named": true,
     "fields": {
+      "type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "type",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "slice_type",
+    "named": true,
+    "fields": {
+      "mut": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "mut",
+            "named": false
+          }
+        ]
+      },
       "type": {
         "multiple": false,
         "required": true,

@@ -185,7 +185,7 @@ module.exports = grammar({
       "}",
     ),
 
-    impl: $ => seq(
+    impl: $ => prec(1, seq(
       field("attr_group", repeat($.attribute_group)),
       "impl",
       optional(seq(
@@ -204,7 +204,7 @@ module.exports = grammar({
         field("func", $.func),
       )),
       "}",
-    ),
+    )),
 
     associated_type: $ => seq(
       "type",
@@ -509,6 +509,7 @@ module.exports = grammar({
       $.func_type,
       $.identifier_type,
       $.option_type,
+      $.slice_type,
     ),
 
     primitive_type: $ => choice(
@@ -557,6 +558,13 @@ module.exports = grammar({
 
     option_type: $ => seq(
       "?",
+      field("type", $.type),
+    ),
+
+    slice_type: $ => seq(
+      field("mut", optional("mut")),
+      "[",
+      "]",
       field("type", $.type),
     ),
 
