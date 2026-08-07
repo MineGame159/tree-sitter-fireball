@@ -1432,6 +1432,10 @@
           {
             "type": "Fireball",
             "named": false
+          },
+          {
+            "type": "Union",
+            "named": false
           }
         ]
       }
@@ -1883,6 +1887,10 @@
   },
   {
     "type": "Fireball",
+    "named": false
+  },
+  {
+    "type": "Union",
     "named": false
   },
   {
