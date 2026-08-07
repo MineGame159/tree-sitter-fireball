@@ -1135,6 +1135,16 @@
           }
         ]
       },
+      "dependency": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "type",
+            "named": true
+          }
+        ]
+      },
       "func": {
         "multiple": true,
         "required": false,

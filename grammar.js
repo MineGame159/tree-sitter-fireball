@@ -177,6 +177,10 @@ module.exports = grammar({
         comma_list("type_param", $.type_param),
         "]",
       )),
+      optional(seq(
+        ":",
+        comma_list("dependency", $.type),
+      )),
       "{",
       repeat(choice(
         field("assoc_type", $.associated_type),
