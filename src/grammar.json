@@ -6,8 +6,17 @@
     "source_file": {
       "type": "REPEAT",
       "content": {
-        "type": "SYMBOL",
-        "name": "decl"
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "decl"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "type"
+          }
+        ]
       }
     },
     "decl": {

@@ -84,7 +84,12 @@ module.exports = grammar({
   ],
 
   rules: {
-    source_file: $ => repeat($.decl),
+    source_file: $ => repeat(choice(
+      $.decl,
+
+      // For highlighting types, e.g. in hover snippets
+      $.type,
+    )),
 
     // Declarations
 

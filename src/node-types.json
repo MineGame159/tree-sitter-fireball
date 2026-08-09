@@ -1521,6 +1521,10 @@
         {
           "type": "decl",
           "named": true
+        },
+        {
+          "type": "type",
+          "named": true
         }
       ]
     }
