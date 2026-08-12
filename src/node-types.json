@@ -116,6 +116,10 @@
       {
         "type": "struct_initializer",
         "named": true
+      },
+      {
+        "type": "typeof",
+        "named": true
       }
     ]
   },
@@ -1678,6 +1682,22 @@
     }
   },
   {
+    "type": "typeof",
+    "named": true,
+    "fields": {
+      "type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "type",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "var",
     "named": true,
     "fields": {
@@ -2086,6 +2106,10 @@
   },
   {
     "type": "type",
+    "named": false
+  },
+  {
+    "type": "typeof",
     "named": false
   },
   {

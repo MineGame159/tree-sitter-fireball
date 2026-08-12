@@ -389,6 +389,7 @@ module.exports = grammar({
       $.sizeof,
       $.alignof,
       $.offsetof,
+      $.typeof,
 
       $.prefix_expr,
       $.postfix_expr,
@@ -453,6 +454,13 @@ module.exports = grammar({
       field("type", $.type),
       ",",
       field("field", $.identifier),
+      ")",
+    ),
+
+    typeof: $ => seq(
+      "typeof",
+      "(",
+      field("type", $.type),
       ")",
     ),
 

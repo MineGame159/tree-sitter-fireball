@@ -1997,6 +1997,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "typeof"
+        },
+        {
+          "type": "SYMBOL",
           "name": "prefix_expr"
         },
         {
@@ -2553,6 +2557,31 @@
           "content": {
             "type": "SYMBOL",
             "name": "identifier"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
+    },
+    "typeof": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "typeof"
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "FIELD",
+          "name": "type",
+          "content": {
+            "type": "SYMBOL",
+            "name": "type"
           }
         },
         {
