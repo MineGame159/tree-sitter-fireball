@@ -522,6 +522,7 @@ module.exports = grammar({
     type: $ => choice(
       $.primitive_type,
       $.array_type,
+      $.reference_type,
       $.pointer_type,
       $.func_type,
       $.identifier_type,
@@ -553,6 +554,12 @@ module.exports = grammar({
       "]",
       field("element", $.type),
     ),
+
+    reference_type: $ => prec.left(0, seq(
+      field("mut", optional("mut")),
+      "&",
+      field("pointee", $.type),
+    )),
 
     pointer_type: $ => prec.left(0, seq(
       field("mut", optional("mut")),

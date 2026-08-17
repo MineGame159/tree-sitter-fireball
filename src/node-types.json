@@ -194,6 +194,10 @@
         "named": true
       },
       {
+        "type": "reference_type",
+        "named": true
+      },
+      {
         "type": "slice_type",
         "named": true
       }
@@ -1430,6 +1434,32 @@
     "type": "primitive_type",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "reference_type",
+    "named": true,
+    "fields": {
+      "mut": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "mut",
+            "named": false
+          }
+        ]
+      },
+      "pointee": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "type",
+            "named": true
+          }
+        ]
+      }
+    }
   },
   {
     "type": "repr_attribute",
