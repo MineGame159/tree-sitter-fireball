@@ -318,6 +318,10 @@
           "named": true
         },
         {
+          "type": "intrinsic_attribute",
+          "named": true
+        },
+        {
           "type": "link_name_attribute",
           "named": true
         },
@@ -1180,6 +1184,34 @@
           {
             "type": "type_param",
             "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "intrinsic_attribute",
+    "named": true,
+    "fields": {
+      "kind": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "memcpy",
+            "named": false
+          },
+          {
+            "type": "memmove",
+            "named": false
+          },
+          {
+            "type": "memset",
+            "named": false
+          },
+          {
+            "type": "syscall",
+            "named": false
           }
         ]
       }
@@ -2079,7 +2111,23 @@
     "named": false
   },
   {
+    "type": "intrinsic",
+    "named": false
+  },
+  {
     "type": "link_name",
+    "named": false
+  },
+  {
+    "type": "memcpy",
+    "named": false
+  },
+  {
+    "type": "memmove",
+    "named": false
+  },
+  {
+    "type": "memset",
     "named": false
   },
   {
@@ -2124,6 +2172,10 @@
   },
   {
     "type": "struct",
+    "named": false
+  },
+  {
+    "type": "syscall",
     "named": false
   },
   {

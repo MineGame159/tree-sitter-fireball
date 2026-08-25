@@ -4153,6 +4153,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "intrinsic_attribute"
+        },
+        {
+          "type": "SYMBOL",
           "name": "repr_attribute"
         },
         {
@@ -4224,6 +4228,48 @@
           "content": {
             "type": "SYMBOL",
             "name": "string"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
+    },
+    "intrinsic_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "intrinsic"
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "FIELD",
+          "name": "kind",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "syscall"
+              },
+              {
+                "type": "STRING",
+                "value": "memcpy"
+              },
+              {
+                "type": "STRING",
+                "value": "memmove"
+              },
+              {
+                "type": "STRING",
+                "value": "memset"
+              }
+            ]
           }
         },
         {

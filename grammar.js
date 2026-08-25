@@ -606,6 +606,7 @@ module.exports = grammar({
       $.test_attribute,
       $.extern_attribute,
       $.link_name_attribute,
+      $.intrinsic_attribute,
       $.repr_attribute,
       $.cfg_attribute,
     ),
@@ -627,6 +628,18 @@ module.exports = grammar({
       "link_name",
       "(",
       field("name", $.string),
+      ")",
+    ),
+
+    intrinsic_attribute: $ => seq(
+      "intrinsic",
+      "(",
+      field("kind", choice(
+        "syscall",
+        "memcpy",
+        "memmove",
+        "memset",
+      )),
       ")",
     ),
 
