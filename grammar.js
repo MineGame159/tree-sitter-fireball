@@ -383,6 +383,7 @@ module.exports = grammar({
       $.string,
       $.null_expr,
 
+      $.with_expr,
       $.struct_initializer,
       $.array_initializer,
 
@@ -416,6 +417,13 @@ module.exports = grammar({
 
     struct_initializer: $ => seq(
       field("type", identifier_path($.identifier, $.type, true)),
+      "{",
+      comma_list("field", $.field_initializer),
+      "}",
+    ),
+
+    with_expr: $ => seq(
+      "with",
       "{",
       comma_list("field", $.field_initializer),
       "}",

@@ -120,6 +120,10 @@
       {
         "type": "typeof",
         "named": true
+      },
+      {
+        "type": "with_expr",
+        "named": true
       }
     ]
   },
@@ -1822,6 +1826,22 @@
     }
   },
   {
+    "type": "with_expr",
+    "named": true,
+    "fields": {
+      "field": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "field_initializer",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "!",
     "named": false
   },
@@ -2220,6 +2240,10 @@
   },
   {
     "type": "while",
+    "named": false
+  },
+  {
+    "type": "with",
     "named": false
   },
   {
