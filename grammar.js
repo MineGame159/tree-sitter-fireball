@@ -610,6 +610,7 @@ module.exports = grammar({
     ),
 
     attribute: $ => choice(
+      $.required_attribute,
       $.init_attribute,
       $.test_attribute,
       $.extern_attribute,
@@ -618,6 +619,8 @@ module.exports = grammar({
       $.repr_attribute,
       $.cfg_attribute,
     ),
+
+    required_attribute: $ => "required",
 
     init_attribute: $ => "init",
 

@@ -334,6 +334,10 @@
           "named": true
         },
         {
+          "type": "required_attribute",
+          "named": true
+        },
+        {
           "type": "test_attribute",
           "named": true
         }
@@ -2177,6 +2181,10 @@
   {
     "type": "repr",
     "named": false
+  },
+  {
+    "type": "required_attribute",
+    "named": true
   },
   {
     "type": "return",

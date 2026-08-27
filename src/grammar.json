@@ -4211,6 +4211,10 @@
       "members": [
         {
           "type": "SYMBOL",
+          "name": "required_attribute"
+        },
+        {
+          "type": "SYMBOL",
           "name": "init_attribute"
         },
         {
@@ -4238,6 +4242,10 @@
           "name": "cfg_attribute"
         }
       ]
+    },
+    "required_attribute": {
+      "type": "STRING",
+      "value": "required"
     },
     "init_attribute": {
       "type": "STRING",
