@@ -444,6 +444,17 @@
       "type": "SEQ",
       "members": [
         {
+          "type": "FIELD",
+          "name": "attr_group",
+          "content": {
+            "type": "REPEAT",
+            "content": {
+              "type": "SYMBOL",
+              "name": "attribute_group"
+            }
+          }
+        },
+        {
           "type": "CHOICE",
           "members": [
             {
@@ -1023,6 +1034,17 @@
     "associated_type": {
       "type": "SEQ",
       "members": [
+        {
+          "type": "FIELD",
+          "name": "attr_group",
+          "content": {
+            "type": "REPEAT",
+            "content": {
+              "type": "SYMBOL",
+              "name": "attribute_group"
+            }
+          }
+        },
         {
           "type": "STRING",
           "value": "type"

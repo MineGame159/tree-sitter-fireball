@@ -144,6 +144,7 @@ module.exports = grammar({
     ),
 
     field: $ => seq(
+      field("attr_group", repeat($.attribute_group)),
       optional("pub"),
       field("name", $.identifier),
       ":",
@@ -216,6 +217,7 @@ module.exports = grammar({
     )),
 
     associated_type: $ => seq(
+      field("attr_group", repeat($.attribute_group)),
       "type",
       field("name", $.identifier),
       optional(seq(

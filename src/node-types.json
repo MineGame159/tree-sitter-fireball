@@ -279,6 +279,16 @@
     "type": "associated_type",
     "named": true,
     "fields": {
+      "attr_group": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "attribute_group",
+            "named": true
+          }
+        ]
+      },
       "name": {
         "multiple": false,
         "required": true,
@@ -622,6 +632,16 @@
     "type": "field",
     "named": true,
     "fields": {
+      "attr_group": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "attribute_group",
+            "named": true
+          }
+        ]
+      },
       "name": {
         "multiple": false,
         "required": true,
