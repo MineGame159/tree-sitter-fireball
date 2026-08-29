@@ -577,13 +577,13 @@ module.exports = grammar({
       field("pointee", $.type),
     )),
 
-    func_type: $ => seq(
+    func_type: $ => prec.left(0, seq(
       "func",
       "(",
       comma_list("param", choice($.param, "...")),
       ")",
-      field("returns", $.type),
-    ),
+      field("returns", optional($.type)),
+    )),
 
     identifier_type: $ => prec.left(seq(
       field("mut", optional("mut")),
