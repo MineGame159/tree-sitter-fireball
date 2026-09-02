@@ -96,6 +96,7 @@ module.exports = grammar({
     decl: $ => choice(
       $.mod,
       $.import,
+      $.type_alias,
       $.struct,
       $.enum,
       $.interface,
@@ -125,6 +126,21 @@ module.exports = grammar({
         "as",
         field("name", $.identifier),
       )),
+      ";",
+    ),
+
+    type_alias: $ => seq(
+      field("attr_group", repeat($.attribute_group)),
+      optional("pub"),
+      "type",
+      field("name", $.identifier),
+      optional(seq(
+        "[",
+        comma_list("type_param", $.type_param),
+        "]",
+      )),
+      "=",
+      field("type", $.type),
       ";",
     ),
 
@@ -475,7 +491,7 @@ module.exports = grammar({
     ),
 
     prefix_expr: $ => prec(13, seq(
-      choice("-", "!", "++", "--", "&", "*"),
+      choice("-", "!", "~", "++", "--", "&", "*"),
       field("expr", $.expr),
     )),
 

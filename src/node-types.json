@@ -34,6 +34,10 @@
       {
         "type": "struct",
         "named": true
+      },
+      {
+        "type": "type_alias",
+        "named": true
       }
     ]
   },
@@ -1739,6 +1743,52 @@
         "types": [
           {
             "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "type_alias",
+    "named": true,
+    "fields": {
+      "attr_group": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "attribute_group",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "type",
+            "named": true
+          }
+        ]
+      },
+      "type_param": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "type_param",
             "named": true
           }
         ]
